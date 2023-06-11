@@ -125,6 +125,8 @@
   box-sizing: border-box;
 }
 
+.a {display: inline;}
+
 a { text-decoration: none;}
 
 li { list-style: none; }
