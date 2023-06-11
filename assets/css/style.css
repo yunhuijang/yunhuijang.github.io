@@ -125,11 +125,12 @@
   box-sizing: border-box;
 }
 
-a { text-decoration: none; display:inline; }
+a { text-decoration: none;}
 
 li { list-style: none; }
 
 img, ion-icon, button, time, span { display: block; }
+a { display: inline; }
 
 button {
   font: inherit;
