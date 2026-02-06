@@ -338,6 +338,7 @@ main {
   justify-content: flex-start;
   align-items: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 .avatar-box {
@@ -361,6 +362,19 @@ main {
   width: max-content;
   padding: 3px 12px;
   border-radius: 8px;
+}
+
+.about-text-sidebar {
+  color: var(--light-gray);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.about-text-sidebar a {
+  color: var(--orange-yellow-crayola);
 }
 
 .info_more-btn {
