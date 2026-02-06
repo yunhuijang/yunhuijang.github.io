@@ -59,3 +59,38 @@ for (let i = 0; i < filterBtn.length; i++) {
   });
 }
 
+// Publication tabs
+const pubTabs = document.querySelectorAll(".pub-tab");
+const pubItems = document.querySelectorAll(".pub-item");
+
+pubTabs.forEach(tab => {
+  tab.addEventListener("click", function() {
+    // Update active tab
+    pubTabs.forEach(t => t.classList.remove("active"));
+    this.classList.add("active");
+
+    const filter = this.dataset.filter;
+
+    pubItems.forEach(item => {
+      if (filter === "all") {
+        item.classList.remove("hidden");
+      } else if (filter === "selected") {
+        if (item.dataset.selected === "true") {
+          item.classList.remove("hidden");
+        } else {
+          item.classList.add("hidden");
+        }
+      }
+    });
+  });
+});
+
+// Initialize: show only selected publications
+document.addEventListener("DOMContentLoaded", function() {
+  pubItems.forEach(item => {
+    if (item.dataset.selected !== "true") {
+      item.classList.add("hidden");
+    }
+  });
+});
+

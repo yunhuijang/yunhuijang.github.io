@@ -86,7 +86,11 @@
         </div>
 
         <p class="about-text-sidebar">
-          I am a Ph.D. student in Graduated School of Artificial Intelligence at KAIST, advised by Prof. <a href="https://sites.google.com/view/sungsooahn0215/home" class="highlight-link" target="_blank" rel="noopener noreferrer">Sungsoo Ahn</a>. I work on AI4Science, especially in generative models and LLM for science.
+          I am a 2nd-year Ph.D. student in Graduated School of Artificial Intelligence at KAIST, advised by Prof. <a href="https://sites.google.com/view/sungsooahn0215/home" class="highlight-link" target="_blank" rel="noopener noreferrer">Sungsoo Ahn</a>. I work on AI4Science, especially in generative models, LLM reasoning, and agent for science.
+        </p>
+
+        <p class="about-text-sidebar">
+          My email/DM are always open to anyone interested in my research and collaboration!
         </p>
 
       </div>
@@ -207,7 +211,12 @@
 
         <!-- News -->
         <section class="about-text mt-sm">
-          <h3 class="h3 service-title">News</h3>
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="newspaper-outline"></ion-icon>
+            </div>
+            <h3 class="h3">News</h3>
+          </div>
           <p>
             <b>Aug 2025</b>: Three papers (<a href="https://arxiv.org/abs/2410.05610" class="highlight-link" target="_blank" rel="noopener noreferrer">CLEANMOL</a>, <a href="https://arxiv.org/abs/2505.20820" class="highlight-link" target="_blank" rel="noopener noreferrer">MT-MOL</a>, <a href="https://arxiv.org/abs/2505.17454" class="highlight-link" target="_blank" rel="noopener noreferrer">CORE-PO</a>) got accepted to EMNLP 2025 (1 Main, 2 Findings).
           </p>
@@ -367,66 +376,110 @@
             <h3 class="h3">Publications</h3>
           </div>
 
-          <ol class="timeline-list">
+          <div class="pub-tabs">
+            <button class="pub-tab active" data-filter="selected">Selected</button>
+            <button class="pub-tab" data-filter="all">All</button>
+          </div>
 
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title"><a href="https://arxiv.org/abs/2602.01815" class="highlight-link" target="_blank" rel="noopener noreferrer">[P2] INDIBATOR: Diverse and Fact-Grounded Individuality for Multi-Agent Debate in Molecular Discovery</a></h4>
+          <ol class="timeline-list" id="publication-list">
+
+            <li class="timeline-item pub-item" data-selected="true">
+              <h4 class="h4 timeline-item-title">[P2] INDIBATOR: Diverse and Fact-Grounded Individuality for Multi-Agent Debate in Molecular Discovery</h4>
               <p class="timeline-text"><u>Yunhui Jang</u>, Seonghyun Park, Jaehyung Kim, Sungsoo Ahn</p>
               <span>Under review</span>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2602.01815" class="pub-btn" target="_blank" rel="noopener noreferrer">Paper</a>
+                <a href="https://github.com/yunhuijang/INDIBATOR" class="pub-btn" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
             </li>
 
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title"><a href="https://arxiv.org/abs/2410.03138" class="highlight-link" target="_blank" rel="noopener noreferrer">[P1] Can LLMs Generate Diverse Molecules? Towards Alignment with Structural Diversity</a></h4>
+            <li class="timeline-item pub-item">
+              <h4 class="h4 timeline-item-title">[P1] Can LLMs Generate Diverse Molecules? Towards Alignment with Structural Diversity</h4>
               <p class="timeline-text">Hyosoon Jang, <u>Yunhui Jang</u>, Minsu Kim, Jinkyoo Park, Sungsoo Ahn</p>
               <span>Under review</span>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2410.03138" class="pub-btn" target="_blank" rel="noopener noreferrer">Paper</a>
+              </div>
             </li>
 
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title"><a href="https://arxiv.org/abs/2505.16340" class="highlight-link" target="_blank" rel="noopener noreferrer">[C8] Improving Chemical Understanding of LLMs via SMILES parsing</a></h4>
+            <li class="timeline-item pub-item" data-selected="true">
+              <h4 class="h4 timeline-item-title">[C8] Improving Chemical Understanding of LLMs via SMILES parsing</h4>
               <p class="timeline-text"><u>Yunhui Jang</u>, Jaehyung Kim, Sungsoo Ahn</p>
               <span>EMNLP 2025 (Main)</span>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2505.16340" class="pub-btn" target="_blank" rel="noopener noreferrer">Paper</a>
+                <a href="https://github.com/yunhuijang/CLEANMOL" class="pub-btn" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
             </li>
 
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title"><a href="https://www.arxiv.org/abs/2505.17454" class="highlight-link" target="_blank" rel="noopener noreferrer">[C7] Self-Training Large Language Models with Confident Reasoning</a></h4>
+            <li class="timeline-item pub-item">
+              <h4 class="h4 timeline-item-title">[C7] Self-Training Large Language Models with Confident Reasoning</h4>
               <p class="timeline-text">Hyosoon Jang, <u>Yunhui Jang</u>, Sungjae Lee, Jungseul Ok, Sungsoo Ahn</p>
               <span>EMNLP 2025 (Findings)</span>
+              <div class="pub-links">
+                <a href="https://www.arxiv.org/abs/2505.17454" class="pub-btn" target="_blank" rel="noopener noreferrer">Paper</a>
+                <a href="https://github.com/hsjang0/CORE-PO" class="pub-btn" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
             </li>
 
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title"><a href="https://arxiv.org/abs/2505.20820" class="highlight-link" target="_blank" rel="noopener noreferrer">[C6] MT-MOL: Multi Agent System with Tool-based Reasoning for Molecular Optimization</a></h4>
+            <li class="timeline-item pub-item" data-selected="true">
+              <h4 class="h4 timeline-item-title">[C6] MT-MOL: Multi Agent System with Tool-based Reasoning for Molecular Optimization</h4>
               <p class="timeline-text">Hyomin Kim, <u>Yunhui Jang</u>, Sungsoo Ahn</p>
               <span>EMNLP 2025 (Findings)</span>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2505.20820" class="pub-btn" target="_blank" rel="noopener noreferrer">Paper</a>
+                <a href="https://github.com/icecream126/mt_mol" class="pub-btn" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
             </li>
 
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title"><a href="https://arxiv.org/abs/2410.05610" class="highlight-link" target="_blank" rel="noopener noreferrer">[C5] Structural Reasoning Improves Molecular Understanding of LLM</a></h4>
+            <li class="timeline-item pub-item">
+              <h4 class="h4 timeline-item-title">[C5] Structural Reasoning Improves Molecular Understanding of LLM</h4>
               <p class="timeline-text"><u>Yunhui Jang</u>, Jaehyung Kim, Sungsoo Ahn</p>
               <span>ACL 2025 (Main)</span>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2410.05610" class="pub-btn" target="_blank" rel="noopener noreferrer">Paper</a>
+                <a href="https://github.com/yunhuijang/MSR" class="pub-btn" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
             </li>
 
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title"><a href="https://arxiv.org/html/2405.16012v1" class="highlight-link" target="_blank" rel="noopener noreferrer">[C4] Pessimistic Backward Policy for GFlowNets</a></h4>
+            <li class="timeline-item pub-item">
+              <h4 class="h4 timeline-item-title">[C4] Pessimistic Backward Policy for GFlowNets</h4>
               <p class="timeline-text">Hyosoon Jang, <u>Yunhui Jang</u>, Minsu Kim, Jinkyoo Park, Sungsoo Ahn</p>
               <span>NeurIPS 2024</span>
+              <div class="pub-links">
+                <a href="https://arxiv.org/html/2405.16012v1" class="pub-btn" target="_blank" rel="noopener noreferrer">Paper</a>
+                <a href="https://github.com/hsjang0/Pessimistic-Backward-Policy-for-GFlowNets" class="pub-btn" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
             </li>
 
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title"><a href="https://arxiv.org/abs/2402.05965" class="highlight-link" target="_blank" rel="noopener noreferrer">[C3] Hybrid Neural Representations for Spherical Data</a></h4>
+            <li class="timeline-item pub-item">
+              <h4 class="h4 timeline-item-title">[C3] Hybrid Neural Representations for Spherical Data</h4>
               <p class="timeline-text">Hyomin Kim, <u>Yunhui Jang</u>, Jaeho Lee, Sungsoo Ahn</p>
               <span>ICML 2024</span>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2402.05965" class="pub-btn" target="_blank" rel="noopener noreferrer">Paper</a>
+                <a href="https://github.com/icecream126/HNeR-S" class="pub-btn" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
             </li>
 
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title"><a href="https://arxiv.org/abs/2312.02230" class="highlight-link" target="_blank" rel="noopener noreferrer">[C2] A Simple and Scalable Representation for Graph Generation</a></h4>
+            <li class="timeline-item pub-item" data-selected="true">
+              <h4 class="h4 timeline-item-title">[C2] A Simple and Scalable Representation for Graph Generation</h4>
               <p class="timeline-text"><u>Yunhui Jang</u>, Seul Lee, Sungsoo Ahn</p>
               <span>ICLR 2024</span>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2312.02230" class="pub-btn" target="_blank" rel="noopener noreferrer">Paper</a>
+                <a href="https://github.com/yunhuijang/GEEL" class="pub-btn" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
             </li>
 
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title"><a href="https://arxiv.org/abs/2305.19125" class="highlight-link" target="_blank" rel="noopener noreferrer">[C1] Hierarchical Graph Generation with K2-trees</a></h4>
+            <li class="timeline-item pub-item" data-selected="true">
+              <h4 class="h4 timeline-item-title">[C1] Hierarchical Graph Generation with K2-trees</h4>
               <p class="timeline-text"><u>Yunhui Jang</u>, Dongwoo Kim, Sungsoo Ahn</p>
               <span>ICLR 2024</span>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2305.19125" class="pub-btn" target="_blank" rel="noopener noreferrer">Paper</a>
+                <a href="https://github.com/yunhuijang/HGGT" class="pub-btn" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
             </li>
 
           </ol>
@@ -512,9 +565,14 @@
 
         <!-- Academic Services -->
         <section class="about-text mt-sm">
-          <h3 class="h3 service-title">Academic Services</h3>
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="people-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Academic Services</h3>
+          </div>
           <p>
-            <b>Reviewer</b>: NeurIPS 2023-2025, ICLR 2024-2025, ICML 2024-2025, AAAI 2025-2026
+            <b>Reviewer</b>: NeurIPS 2023-2025, ICLR 2024-2026, ICML 2024-2025, AAAI 2025-2026
           </p>
         </section>
 
