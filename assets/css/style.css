@@ -155,9 +155,19 @@ input, textarea {
 
 :focus { outline-color: var(--orange-yellow-crayola); }
 
+:focus-visible {
+  outline: 2px solid var(--orange-yellow-crayola);
+  outline-offset: 2px;
+}
+
 html { font-family: var(--ff-poppins); }
 
 body { background: var(--smoky-black); }
+
+/* Utility classes */
+.highlight-link { color: rgba(254, 202, 13, 0.988); }
+
+.mt-sm { padding-top: 10px; }
 
 
 
@@ -553,7 +563,7 @@ main {
 .service-item-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-3);
+  font-weight: var(--fw-300);
   line-height: 1.6;
 }
 

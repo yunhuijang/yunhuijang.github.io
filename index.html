@@ -5,25 +5,58 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yunhui Jang</title>
+  <title>Yunhui Jang | AI Researcher</title>
 
-  <!--
-    - favicon
-  -->
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Yunhui Jang - Ph.D. student at KAIST. Research in AI4Science, generative models, LLMs. Publications in NeurIPS, ICML, ICLR.">
+  <meta name="author" content="Yunhui Jang">
+  <link rel="canonical" href="https://yunhuijang.github.io/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Yunhui Jang | AI Researcher">
+  <meta property="og:description" content="Ph.D. student at KAIST researching AI for Science, generative models, and LLMs.">
+  <meta property="og:image" content="https://yunhuijang.github.io/assets/images/my-photo.jpeg">
+  <meta property="og:url" content="https://yunhuijang.github.io/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Yunhui Jang | AI Researcher">
+  <meta name="twitter:description" content="Ph.D. student at KAIST researching AI for Science.">
+  <meta name="twitter:image" content="https://yunhuijang.github.io/assets/images/my-photo.jpeg">
+
+  <!-- Favicon -->
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
-  <!--
-    - custom css link
-  -->
+  <!-- CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!--
-    - google font link
-  -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <meta name="google-site-verification" content="l7DHWacALQ7CXzX50YylrOponf8mR0UbHbZo_6SYOJs" />
+
+  <!-- Google Verification -->
+  <meta name="google-site-verification" content="l7DHWacALQ7CXzX50YylrOponf8mR0UbHbZo_6SYOJs">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yunhui Jang",
+    "jobTitle": "Ph.D. Student",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "KAIST"
+    },
+    "url": "https://yunhuijang.github.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/yunhui-jang-268458147/",
+      "https://scholar.google.co.kr/citations?user=mYHCTYQAAAAJ"
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -43,7 +76,7 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/my-photo.jpeg" alt="Richard hanrick" width="80">
+          <img src="./assets/images/my-photo.jpeg" alt="Yunhui Jang" width="80">
         </figure>
 
         <div class="info-content">
@@ -52,15 +85,15 @@
           <p class="title">Ph.D student</p>
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
+        <button class="info_more-btn" data-sidebar-btn aria-expanded="false" aria-controls="sidebar-contacts" aria-label="Show contacts">
           <span>Show Contacts</span>
 
-          <ion-icon name="chevron-down"></ion-icon>
+          <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
         </button>
 
       </div>
 
-      <div class="sidebar-info_more">
+      <div class="sidebar-info_more" id="sidebar-contacts">
 
         <div class="separator"></div>
 
@@ -103,7 +136,7 @@
             <div class="contact-info">
               <p class="contact-title">LinkedIn</p>
 
-              <a href="https://www.linkedin.com/in/yunhui-jang-268458147/" class="contact-link">LinkedIn of Yunhui Jang</a>
+              <a href="https://www.linkedin.com/in/yunhui-jang-268458147/" class="contact-link" target="_blank" rel="noopener noreferrer">LinkedIn of Yunhui Jang</a>
             </div>
 
           </li>
@@ -117,7 +150,7 @@
             <div class="contact-info">
               <p class="contact-title">Blog</p>
 
-              <a href="https://process-mining.tistory.com" class="contact-link">Blog (in Korean)</a>
+              <a href="https://process-mining.tistory.com" class="contact-link" target="_blank" rel="noopener noreferrer">Blog (in Korean)</a>
             </div>
 
           </li>
@@ -131,32 +164,14 @@
             <div class="contact-info">
               <p class="contact-title">Google Scholar</p>
 
-              <a href="https://scholar.google.co.kr/citations?user=mYHCTYQAAAAJ&hl=ko&authuser=1&oi=ao" class="contact-link">Profile of Yunhui Jang</a>
+              <a href="https://scholar.google.co.kr/citations?user=mYHCTYQAAAAJ&hl=ko&authuser=1&oi=ao" class="contact-link" target="_blank" rel="noopener noreferrer">Profile of Yunhui Jang</a>
             </div>
 
           </li>
 
         </ul>
 
-        <!-- <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div> -->
+      </div>
 
     </aside>
 
@@ -186,17 +201,9 @@
             <button class="navbar-link" data-nav-link>Curriculum vitae</button>
           </li>
 
-          <!-- <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li> -->
-
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Publications</button>
           </li>
-
-          <!-- <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li> -->
 
         </ul>
 
@@ -218,7 +225,7 @@
 
         <section class="about-text">
           <p>
-            I am a Ph.D. student in Graduated School of Artificial Intelligence at KAIST, advised by Prof. <a href="https://sites.google.com/view/sungsooahn0215/home" style="color: rgba(254, 202, 13, 0.988)">Sungsoo Ahn</a>. I work on AI4Science, especially in generative models and LLM for science.
+            I am a Ph.D. student in Graduated School of Artificial Intelligence at KAIST, advised by Prof. <a href="https://sites.google.com/view/sungsooahn0215/home" class="highlight-link" target="_blank" rel="noopener noreferrer">Sungsoo Ahn</a>. I work on AI4Science, especially in generative models and LLM for science.
           </p>
 
         </section>
@@ -229,70 +236,38 @@
 
         <section class="service">
 
-<!--           <h3 class="h3 service-title">Interests</h3> -->
-
-<!--           <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <ion-icon name="analytics-outline"></ion-icon>
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Graph neural networks</h4>
-
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <ion-icon name="barbell-outline"></ion-icon>
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Deep generative models</h4>
-
-              </div>
-
-            </li>
-
-
-          </ul>
- -->
-          <section class="about-text" style="padding-top: 10px">
+          <section class="about-text mt-sm">
             <h3 class="h3 service-title">News</h3>
             <p>
-              <b>Aug 2025</b>: Three papers (<a href="https://arxiv.org/abs/2410.05610" style="color: rgba(254, 202, 13, 0.988)">CLEANMOL</a>, <a href="https://arxiv.org/abs/2505.20820" style="color: rgba(254, 202, 13, 0.988)">MT-MOL</a>, <a href="https://arxiv.org/abs/2505.17454" style="color: rgba(254, 202, 13, 0.988)">CORE-PO</a>) got accepted to EMNLP 2025 (1 Main, 2 Findings).
+              <b>Aug 2025</b>: Three papers (<a href="https://arxiv.org/abs/2410.05610" class="highlight-link" target="_blank" rel="noopener noreferrer">CLEANMOL</a>, <a href="https://arxiv.org/abs/2505.20820" class="highlight-link" target="_blank" rel="noopener noreferrer">MT-MOL</a>, <a href="https://arxiv.org/abs/2505.17454" class="highlight-link" target="_blank" rel="noopener noreferrer">CORE-PO</a>) got accepted to EMNLP 2025 (1 Main, 2 Findings).
             </p>
             <p>
-              <b>Jul 2025</b>: I’ve started my internship at  Labs — looking forward to connecting in Montreal 🇨🇦!
+              <b>Jul 2025</b>: I've started my internship at Valence Labs — looking forward to connecting in Montreal!
             </p>
             <p>
-              <b>May 2025</b>: A paper (<a href="https://arxiv.org/abs/2410.05610" style="color: rgba(254, 202, 13, 0.988)">MSR</a>) got accepted to ACL 2025 (Main).
+              <b>May 2025</b>: A paper (<a href="https://arxiv.org/abs/2410.05610" class="highlight-link" target="_blank" rel="noopener noreferrer">MSR</a>) got accepted to ACL 2025 (Main).
             </p>
             <p>
-               <b>Dec 2024</b>: <a href="https://arxiv.org/abs/2305.19125" style="color: rgba(254, 202, 13, 0.988)">HGGT</a> got honored to be the winner at <a href="https://www.qualcomm.com/research/university-relations/innovation-fellowship/2024-south-korea" style="color: rgba(254, 202, 13, 0.988)">Qualcomm Innovation Fellowship</a>.
+               <b>Dec 2024</b>: <a href="https://arxiv.org/abs/2305.19125" class="highlight-link" target="_blank" rel="noopener noreferrer">HGGT</a> got honored to be the winner at <a href="https://www.qualcomm.com/research/university-relations/innovation-fellowship/2024-south-korea" class="highlight-link" target="_blank" rel="noopener noreferrer">Qualcomm Innovation Fellowship</a>.
             </p>
             <p>
-              <b>Sep 2024</b>: A paper (<a href="https://arxiv.org/abs/2410.03138" style="color: rgba(254, 202, 13, 0.988)">PBP-GFN</a>) got accepted to NeurIPS 2024.
+              <b>Sep 2024</b>: A paper (<a href="https://arxiv.org/abs/2410.03138" class="highlight-link" target="_blank" rel="noopener noreferrer">PBP-GFN</a>) got accepted to NeurIPS 2024.
+            </p>
             <p>
-            <p>
-              <b>Apr 2024</b>: A paper (<a href="https://arxiv.org/abs/2402.05965" style="color: rgba(254, 202, 13, 0.988)">HNeR-S</a>) got accepted to ICML 2024.
+              <b>Apr 2024</b>: A paper (<a href="https://arxiv.org/abs/2402.05965" class="highlight-link" target="_blank" rel="noopener noreferrer">HNeR-S</a>) got accepted to ICML 2024.
+            </p>
             <p>
               <b>Apr 2024</b>: I became a recipient of the Presidential Science Scholarship.
             </p>
             <p>
-              <b>Jan 2024</b>: <a href="https://arxiv.org/abs/2305.19125" style="color: rgba(254, 202, 13, 0.988)">HGGT</a> won the Bronze prize in Samsung Humantech Paper Awards.
+              <b>Jan 2024</b>: <a href="https://arxiv.org/abs/2305.19125" class="highlight-link" target="_blank" rel="noopener noreferrer">HGGT</a> won the Bronze prize in Samsung Humantech Paper Awards.
             </p>
             <p>
-              <b>Jan 2024</b>: Two papers (<a href="https://arxiv.org/abs/2305.19125" style="color: rgba(254, 202, 13, 0.988)">HGGT</a>, <a href="https://arxiv.org/abs/2312.02230" style="color: rgba(254, 202, 13, 0.988)">GEEL</a>) got accepted to ICLR 2024.
+              <b>Jan 2024</b>: Two papers (<a href="https://arxiv.org/abs/2305.19125" class="highlight-link" target="_blank" rel="noopener noreferrer">HGGT</a>, <a href="https://arxiv.org/abs/2312.02230" class="highlight-link" target="_blank" rel="noopener noreferrer">GEEL</a>) got accepted to ICLR 2024.
             </p>
           </section>
 
-          <section class="about-text" style="padding-top: 10px">
+          <section class="about-text mt-sm">
             <h3 class="h3 service-title">Academic services</h3>
             <p>
               <b>Reviewer</b>: NeurIPS 2023-2025, ICLR 2024-2025, ICML 2024-2025, AAAI 2025-2026
@@ -300,51 +275,6 @@
           </section>
 
         </section>
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
 
       </article>
 
@@ -381,7 +311,7 @@
               <span>Mar. 2025 - Present</span>
 
               <p class="timeline-text">
-                Supervised by <a href="https://sites.google.com/view/sungsooahn0215/home" style="color: rgba(254, 202, 13, 0.988)">Sungsoo Ahn</a>
+                Supervised by <a href="https://sites.google.com/view/sungsooahn0215/home" class="highlight-link" target="_blank" rel="noopener noreferrer">Sungsoo Ahn</a>
               </p>
 
             </li>
@@ -395,10 +325,10 @@
               <span>Sep. 2022 - Feb. 2025</span>
 
               <p class="timeline-text">
-                Supervised by <a href="https://sites.google.com/view/sungsooahn0215/home" style="color: rgba(254, 202, 13, 0.988)">Sungsoo Ahn</a>
+                Supervised by <a href="https://sites.google.com/view/sungsooahn0215/home" class="highlight-link" target="_blank" rel="noopener noreferrer">Sungsoo Ahn</a>
               </p>
               <p class="timeline-text">
-                A member of <a href="https://ml.postech.ac.kr" style="color: rgba(254, 202, 13, 0.988)">Machine Learning Lab</a>
+                A member of <a href="https://ml.postech.ac.kr" class="highlight-link" target="_blank" rel="noopener noreferrer">Machine Learning Lab</a>
               </p>
 
             </li>
@@ -422,7 +352,7 @@
               <span>Mar. 2019 - Feb. 2020</span>
               
               <!-- <p class="timeline-text">
-                Supervised by <a href="http://www.padsweb.rwth-aachen.de/wvdaalst/" style="color: rgba(254, 202, 13, 0.988)">Wil van der Aalst</a>
+                Supervised by <a href="http://www.padsweb.rwth-aachen.de/wvdaalst/" class="highlight-link">Wil van der Aalst</a>
               </p> -->
 
             </li>
@@ -466,7 +396,6 @@
               Conducted research on constructing LLM agent for reasoning and developing reasoning models for virtual cells              
               </p>
 
-            </li>
             </li>
 
             <li class="timeline-item">
@@ -635,68 +564,6 @@
 
         </section>
 
-        <!-- <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Branding</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section> -->
-
       </article>
 
 
@@ -715,53 +582,53 @@
 
         <section class="projects">
 
-          <ul class="filter-list">
+          <ul class="filter-list" role="tablist" aria-label="Filter publications">
 
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
+            <li class="filter-item" role="presentation">
+              <button class="active" data-filter-btn role="tab" aria-selected="true">All</button>
             </li>
 
-            <li class="filter-item">
-              <button data-filter-btn>International conferences</button>
+            <li class="filter-item" role="presentation">
+              <button data-filter-btn role="tab" aria-selected="false">International conferences</button>
             </li>
 
-            <li class="filter-item">
-              <button data-filter-btn>Workshops</button>
+            <li class="filter-item" role="presentation">
+              <button data-filter-btn role="tab" aria-selected="false">Workshops</button>
             </li>
 
-            <li class="filter-item">
-              <button data-filter-btn>Pre-prints</button>
+            <li class="filter-item" role="presentation">
+              <button data-filter-btn role="tab" aria-selected="false">Pre-prints</button>
             </li>
 
           </ul>
 
           <div class="filter-select-box">
 
-            <button class="filter-select" data-select>
+            <button class="filter-select" data-select aria-haspopup="listbox" aria-expanded="false" aria-label="Filter publications">
 
-              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-value" data-select-value>Select category</div>
 
               <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
+                <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
               </div>
 
             </button>
 
-            <ul class="select-list">
+            <ul class="select-list" role="listbox">
 
-              <li class="select-item">
+              <li class="select-item" role="option">
                 <button data-select-item>All</button>
               </li>
 
-              <li class="select-item">
+              <li class="select-item" role="option">
                 <button data-select-item>International conferences</button>
               </li>
 
-              <li class="select-item">
+              <li class="select-item" role="option">
                 <button data-select-item>Workshops</button>
               </li>
 
-              <li class="select-item">
+              <li class="select-item" role="option">
                 <button data-select-item>Pre-prints</button>
               </li>
 
@@ -956,447 +823,8 @@
 
               </a>
             </li>
-            
-
-            <!-- <li class="project-item  active" data-filter-item data-category="domestic conferences">
-              <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11101141">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/blog-6.jpg" alt="process layout improvement" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">[N3] Process layout improvement based on graph partitioning, rank revising, and order revising</h3>
-                <p class="project-category"> Ducksang Lee, <u>Yunhui Jang</u>, Minseok Song</p>
-                <p class="project-category">KIIE, 2022 (in Korean)</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="domestic conferences">
-              <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11101143">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/blog-2.jpg" alt="process layout improvement" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">[N2] Customer journey analysis based on process mining and prediction models</h3>
-                <p class="project-category"> Kangah Park, <u>Yunhui Jang</u>, Seungmin Jung, Minsu Cho, Minseok Song</p>
-                <p class="project-category">KIIE, 2022 (in Korean)</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="domestic conferences">
-              <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10671973">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/blog-3.jpg" alt="process layout improvement" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">[N1] Process model layout visibility improvement based on cross-minimizing</h3>
-                <p class="project-category"> <u>Yunhui Jang</u>, Yeongseok Jang, Ducksang Lee, Seongju Kim, Minseok Song</p>
-                <p class="project-category">KIIE, 2021 (in Korean)</p>
-
-              </a>
-            </li> -->
-
-
-            <!-- <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li> -->
 
           </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Publications</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article> -->
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <!-- <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
 
         </section>
 
