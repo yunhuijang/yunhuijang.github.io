@@ -85,12 +85,6 @@
           <p class="title">Ph.D student</p>
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn aria-expanded="false" aria-controls="sidebar-contacts" aria-label="Show contacts">
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-        </button>
-
       </div>
 
       <div class="sidebar-info_more" id="sidebar-contacts">
@@ -199,10 +193,6 @@
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Curriculum vitae</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Publications</button>
           </li>
 
         </ul>
@@ -564,267 +554,79 @@
 
         </section>
 
-      </article>
+        <section class="timeline">
 
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="document-text-outline"></ion-icon>
+            </div>
 
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="publications">
-
-        <header>
-          <h2 class="h2 article-title">Publications</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list" role="tablist" aria-label="Filter publications">
-
-            <li class="filter-item" role="presentation">
-              <button class="active" data-filter-btn role="tab" aria-selected="true">All</button>
-            </li>
-
-            <li class="filter-item" role="presentation">
-              <button data-filter-btn role="tab" aria-selected="false">International conferences</button>
-            </li>
-
-            <li class="filter-item" role="presentation">
-              <button data-filter-btn role="tab" aria-selected="false">Workshops</button>
-            </li>
-
-            <li class="filter-item" role="presentation">
-              <button data-filter-btn role="tab" aria-selected="false">Pre-prints</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select aria-haspopup="listbox" aria-expanded="false" aria-label="Filter publications">
-
-              <div class="select-value" data-select-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list" role="listbox">
-
-              <li class="select-item" role="option">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item" role="option">
-                <button data-select-item>International conferences</button>
-              </li>
-
-              <li class="select-item" role="option">
-                <button data-select-item>Workshops</button>
-              </li>
-
-              <li class="select-item" role="option">
-                <button data-select-item>Pre-prints</button>
-              </li>
-
-            </ul>
-
+            <h3 class="h3">Publications</h3>
           </div>
-    
-          <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="pre-prints">
-              <a href="https://arxiv.org/abs/2602.01815">
+          <ol class="timeline-list">
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/indibator.png" alt="INDIBATOR" loading="lazy" style="max-height: 700px; max-width: 1200px;">
-                </figure>
-
-                <h3 class="project-title">[P2] INDIBATOR: Diverse and Fact-Grounded Individuality for Multi-Agent Debate in Molecular Discovery</h3>
-                <p class="project-category"> <u>Yunhui Jang</u>, Seonghyun Park, Jaehyung Kim, Sungsoo Ahn</p>
-                <p class="project-category">Under review</p>
-
-              </a>
-            </li>
-            
-            <li class="project-item  active" data-filter-item data-category="pre-prints">
-              <a href="https://arxiv.org/abs/2410.03138">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/diverse.png" alt="DiverseMol" loading="lazy" style="max-height: 700px; max-width: 1200px;">
-                </figure>
-
-                <h3 class="project-title">[P1] Can LLMs Generate Diverse Molecules? Towards Alignment with Structural Diversity</h3>
-                <p class="project-category"> Hyosoon Jang, <u>Yunhui Jang</u>, Minsu Kim, Jinkyoo Park, Sungsoo Ahn</p>
-                <p class="project-category">Under review</p>
-
-              </a>
-            </li>
-            
-            <li class="project-item  active" data-filter-item data-category="international conferences">
-              <a href="https://arxiv.org/abs/2505.16340">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/mol_fund.png" alt="CLEANMOL" loading="lazy" style="max-height: 700px; max-width: 1200px;">
-                </figure>
-
-                <h3 class="project-title">[C8] Improving Chemical Understanding of LLMs via SMILES parsing</h3>
-                <p class="project-category"> <u>Yunhui Jang</u>, Jaehyung Kim, Sungsoo Ahn</p>
-                <p class="project-category">EMNLP 2025 (Main)</p>
-
-              </a>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title"><a href="https://arxiv.org/abs/2602.01815" class="highlight-link" target="_blank" rel="noopener noreferrer">[P2] INDIBATOR: Diverse and Fact-Grounded Individuality for Multi-Agent Debate in Molecular Discovery</a></h4>
+              <p class="timeline-text"><u>Yunhui Jang</u>, Seonghyun Park, Jaehyung Kim, Sungsoo Ahn</p>
+              <span>Under review</span>
             </li>
 
-                        <li class="project-item  active" data-filter-item data-category="international conferences">
-              <a href="https://www.arxiv.org/abs/2505.17454">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/confident_reason.png" alt="ConfReason" loading="lazy" style="max-height: 700px; max-width: 1200px;">
-                </figure>
-
-                <h3 class="project-title">[C7] Self-Training Large Language Models with Confident Reasoning</h3>
-                <p class="project-category"> Hyosoon Jang, <u>Yunhui Jang</u>, Sungjae Lee, Jungseul Ok, Sungsoo Ahn</p>
-                <p class="project-category">EMNLP 2025 (Findings)</p>
-
-              </a>
-            </li>
-                        <li class="project-item  active" data-filter-item data-category="international conferences">
-              <a href="https://arxiv.org/abs/2505.20820">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/mt_mol.png" alt="MTMol" loading="lazy" style="max-height: 700px; max-width: 1200px;">
-                </figure>
-
-                <h3 class="project-title">[C6] MT-MOL: Multi Agent System with Tool-based Reasoning for Molecular Optimization</h3>
-                <p class="project-category"> Hyomin Kim, <u>Yunhui Jang</u>, Sungsoo Ahn</p>
-                <p class="project-category">EMNLP 2025 (Findings)</p>
-
-              </a>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title"><a href="https://arxiv.org/abs/2410.03138" class="highlight-link" target="_blank" rel="noopener noreferrer">[P1] Can LLMs Generate Diverse Molecules? Towards Alignment with Structural Diversity</a></h4>
+              <p class="timeline-text">Hyosoon Jang, <u>Yunhui Jang</u>, Minsu Kim, Jinkyoo Park, Sungsoo Ahn</p>
+              <span>Under review</span>
             </li>
 
-            
-            <li class="project-item  active" data-filter-item data-category="international conferences">
-              <a href="https://arxiv.org/abs/2410.05610">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/structcot.png" alt="StructCoT" loading="lazy" style="max-height: 700px; max-width: 1200px;">
-                </figure>
-
-                <h3 class="project-title">[C5] Structural Reasoning Improves Molecular Understanding of LLM</h3>
-                <p class="project-category"> <u>Yunhui Jang</u>, Jaehyung Kim, Sungsoo Ahn</p>
-                <p class="project-category">ACL 2025 (Main)</p>
-                <p class="project-category">NeurIPS 2024 AIDrugX Workshop</p>
-
-              </a>
-            </li>
-            
-
-
-            
-            <li class="project-item  active" data-filter-item data-category="international conferences">
-              <a href="https://arxiv.org/html/2405.16012v1">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/pbp_gfn.png" alt="PBP-GFN" loading="lazy" style="max-height: 700px; max-width: 1200px;">
-                </figure>
-
-                <h3 class="project-title">[C4] Pessimistic Backward Policy for GFlowNets</h3>
-                <p class="project-category"> Hyosoon Jang, <u>Yunhui Jang</u>, Minsu Kim, Jinkyoo Park, Sungsoo Ahn</p>
-                <p class="project-category">NeurIPS 2024</p>
-
-              </a>
-            </li>
-            
-            <li class="project-item  active" data-filter-item data-category="international conferences">
-              <a href="https://arxiv.org/abs/2402.05965">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/hyer.png" alt="HNeR-S" loading="lazy" style="max-height: 700px; max-width: 1200px;">
-                </figure>
-
-                <h3 class="project-title">[C3] Hybrid Neural Representations for Spherical Data</h3>
-                <p class="project-category"> Hyomin Kim, <u>Yunhui Jang</u>, Jaeho Lee, Sungsoo Ahn</p>
-                <p class="project-category">ICML 2024</p>
-
-              </a>
-            </li>
-            
-            <li class="project-item  active" data-filter-item data-category="international conferences">
-              <a href="https://arxiv.org/abs/2312.02230">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/geel.jpg" alt="geel" loading="lazy" style="max-height: 700px; max-width: 1200px;">
-                </figure>
-
-                <h3 class="project-title">[C2, W2] A Simple and Scalable Representation for Graph Generation</h3>
-                <p class="project-category"> <u>Yunhui Jang</u>, Seul Lee, Sungsoo Ahn</p>
-                <p class="project-category">ICLR 2024</p>
-                <p class="project-category">NeurIPS 2023 GLFrontiers Workshop</p>
-
-              </a>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title"><a href="https://arxiv.org/abs/2505.16340" class="highlight-link" target="_blank" rel="noopener noreferrer">[C8] Improving Chemical Understanding of LLMs via SMILES parsing</a></h4>
+              <p class="timeline-text"><u>Yunhui Jang</u>, Jaehyung Kim, Sungsoo Ahn</p>
+              <span>EMNLP 2025 (Main)</span>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="international conferences">
-              <a href="https://arxiv.org/abs/2305.19125">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/hggt.png" alt="K2-trees" loading="lazy" style="max-height: 700px; max-width: 1200px;">
-                </figure>
-
-                <h3 class="project-title">[C1, W1] Hierarchical Graph Generation with K2-trees</h3>
-                <p class="project-category"> <u>Yunhui Jang</u>, Dongwoo Kim, Sungsoo Ahn</p>
-                <p class="project-category">ICLR 2024</p>
-                <p class="project-category">ICML 2023 Structured Probabilistic Inference & Generative Modeling Workshop</p>
-
-              </a>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title"><a href="https://www.arxiv.org/abs/2505.17454" class="highlight-link" target="_blank" rel="noopener noreferrer">[C7] Self-Training Large Language Models with Confident Reasoning</a></h4>
+              <p class="timeline-text">Hyosoon Jang, <u>Yunhui Jang</u>, Sungjae Lee, Jungseul Ok, Sungsoo Ahn</p>
+              <span>EMNLP 2025 (Findings)</span>
             </li>
 
-          </ul>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title"><a href="https://arxiv.org/abs/2505.20820" class="highlight-link" target="_blank" rel="noopener noreferrer">[C6] MT-MOL: Multi Agent System with Tool-based Reasoning for Molecular Optimization</a></h4>
+              <p class="timeline-text">Hyomin Kim, <u>Yunhui Jang</u>, Sungsoo Ahn</p>
+              <span>EMNLP 2025 (Findings)</span>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title"><a href="https://arxiv.org/abs/2410.05610" class="highlight-link" target="_blank" rel="noopener noreferrer">[C5] Structural Reasoning Improves Molecular Understanding of LLM</a></h4>
+              <p class="timeline-text"><u>Yunhui Jang</u>, Jaehyung Kim, Sungsoo Ahn</p>
+              <span>ACL 2025 (Main)</span>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title"><a href="https://arxiv.org/html/2405.16012v1" class="highlight-link" target="_blank" rel="noopener noreferrer">[C4] Pessimistic Backward Policy for GFlowNets</a></h4>
+              <p class="timeline-text">Hyosoon Jang, <u>Yunhui Jang</u>, Minsu Kim, Jinkyoo Park, Sungsoo Ahn</p>
+              <span>NeurIPS 2024</span>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title"><a href="https://arxiv.org/abs/2402.05965" class="highlight-link" target="_blank" rel="noopener noreferrer">[C3] Hybrid Neural Representations for Spherical Data</a></h4>
+              <p class="timeline-text">Hyomin Kim, <u>Yunhui Jang</u>, Jaeho Lee, Sungsoo Ahn</p>
+              <span>ICML 2024</span>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title"><a href="https://arxiv.org/abs/2312.02230" class="highlight-link" target="_blank" rel="noopener noreferrer">[C2] A Simple and Scalable Representation for Graph Generation</a></h4>
+              <p class="timeline-text"><u>Yunhui Jang</u>, Seul Lee, Sungsoo Ahn</p>
+              <span>ICLR 2024</span>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title"><a href="https://arxiv.org/abs/2305.19125" class="highlight-link" target="_blank" rel="noopener noreferrer">[C1] Hierarchical Graph Generation with K2-trees</a></h4>
+              <p class="timeline-text"><u>Yunhui Jang</u>, Dongwoo Kim, Sungsoo Ahn</p>
+              <span>ICLR 2024</span>
+            </li>
+
+          </ol>
 
         </section>
 
