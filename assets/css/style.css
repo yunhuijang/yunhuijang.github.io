@@ -853,51 +853,51 @@ main {
 
 .pub-tabs {
   display: flex;
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 8px;
+  margin-bottom: 15px;
   margin-left: 45px;
+  font-size: var(--fs-6);
 }
 
 .pub-tab {
-  padding: 6px 16px;
-  font-size: var(--fs-7);
+  padding: 0;
+  background: none;
+  border: none;
   color: var(--light-gray);
-  border: 1px solid var(--jet);
-  border-radius: 20px;
-  background: transparent;
   cursor: pointer;
-  transition: var(--transition-1);
 }
 
 .pub-tab:hover {
-  color: var(--orange-yellow-crayola);
-  border-color: var(--orange-yellow-crayola);
+  color: hsl(45, 100%, 35%);
 }
 
 .pub-tab.active {
-  color: var(--smoky-black);
-  background: var(--orange-yellow-crayola);
-  border-color: var(--orange-yellow-crayola);
+  color: hsl(45, 100%, 35%);
+  font-weight: var(--fw-500);
+}
+
+.pub-tab-separator {
+  color: var(--light-gray);
 }
 
 .pub-links {
   display: flex;
-  gap: 8px;
-  margin-top: 8px;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  font-size: var(--fs-7);
 }
 
-.pub-btn {
-  padding: 4px 12px;
-  font-size: var(--fs-8);
-  color: var(--orange-yellow-crayola);
-  border: 1px solid var(--orange-yellow-crayola);
-  border-radius: 4px;
-  transition: var(--transition-1);
+.pub-link {
+  color: hsl(45, 100%, 35%);
 }
 
-.pub-btn:hover {
-  background: var(--orange-yellow-crayola);
-  color: var(--smoky-black);
+.pub-link:hover {
+  text-decoration: underline;
+}
+
+.pub-link-separator {
+  color: var(--light-gray);
 }
 
 .pub-item.hidden {

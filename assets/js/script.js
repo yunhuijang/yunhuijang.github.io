@@ -9,22 +9,24 @@ const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-select-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
-select.addEventListener("click", function () {
-  elementToggleFunc(this);
-  // Update ARIA expanded state
-  const isExpanded = this.classList.contains("active");
-  this.setAttribute("aria-expanded", isExpanded);
-});
-
-// add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
-    const selectedValue = this.innerText.toLowerCase();
-    selectValue.textContent = this.innerText;
-    elementToggleFunc(select);
-    select.setAttribute("aria-expanded", "false");
-    filterFunc(selectedValue);
+if (select) {
+  select.addEventListener("click", function () {
+    elementToggleFunc(this);
+    // Update ARIA expanded state
+    const isExpanded = this.classList.contains("active");
+    this.setAttribute("aria-expanded", isExpanded);
   });
+
+  // add event in all select items
+  for (let i = 0; i < selectItems.length; i++) {
+    selectItems[i].addEventListener("click", function () {
+      const selectedValue = this.innerText.toLowerCase();
+      selectValue.textContent = this.innerText;
+      elementToggleFunc(select);
+      select.setAttribute("aria-expanded", "false");
+      filterFunc(selectedValue);
+    });
+  }
 }
 
 // filter variables
