@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INDIBATOR: Multi-Agent Debate for Molecular Discovery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: #333;
+      background: #fafafa;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+    .venue {
+      display: inline-block;
+      background: #888;
+      color: #fff;
+      padding: 4px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    .authors {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .authors a {
+      color: hsl(45, 100%, 35%);
+      text-decoration: none;
+    }
+    .authors a:hover {
+      text-decoration: underline;
+    }
+    .affiliation {
+      font-size: 0.95rem;
+      color: #777;
+      margin-bottom: 30px;
+    }
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 400;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+    .links a:hover {
+      background: hsl(45, 100%, 35%);
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 15px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid hsl(45, 100%, 45%);
+    }
+    .teaser {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .teaser img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .teaser-caption {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 10px;
+    }
+    .abstract {
+      text-align: justify;
+    }
+    .bibtex {
+      background: #f0f0f0;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    .bibtex pre {
+      font-family: 'Courier New', monospace;
+      font-size: 0.85rem;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    .back-link {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .back-link a {
+      color: hsl(45, 100%, 35%);
+      text-decoration: none;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+    .charts-container {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .chart-wrapper {
+      flex: 1;
+      min-width: 200px;
+      height: 250px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="title">INDIBATOR: Diverse and Fact-Grounded Individuality for Multi-Agent Debate in Molecular Discovery</h1>
+      <div class="venue">Under Review</div>
+      <div class="authors">
+        <a href="https://yunhuijang.github.io">Yunhui Jang</a>,
+        <a href="https://seonghyun26.github.io/hyun/">Seonghyun Park</a>,
+        <a href="https://sites.google.com/view/jaehyungkim">Jaehyung Kim</a>,
+        <a href="https://sites.google.com/view/sungsooahn0215/home">Sungsoo Ahn</a>
+      </div>
+      <div class="affiliation">KAIST, Yonsei University</div>
+      <div class="links">
+        <a href="https://arxiv.org/abs/2602.01815" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+          Paper
+        </a>
+        <a href="https://github.com/yunhuijang/INDIBATOR" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/></svg>
+          Code
+        </a>
+      </div>
+    </div>
+
+    <div class="teaser">
+      <img src="../../assets/images/p2_indibator.png" alt="INDIBATOR Overview">
+      <p class="teaser-caption">Overview of the INDIBATOR framework for multi-agent molecular discovery.</p>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Overview</h2>
+      <p class="abstract">
+        We introduce a framework enabling multi-agent systems to conduct scientific discovery by grounding agents in personalized scientist profiles. These profiles are built from two sources: academic publication histories providing domain knowledge and molecular data providing structural understanding. Agents participate in iterative debate cycles involving proposals, critiques, and voting. Our study demonstrates that agents with fine-grained individualized characteristics consistently surpass those using simplified role-based or keyword-based personas, achieving competitive results. The findings highlight the importance of capturing the "scientific DNA" of individual agents for enhanced discovery outcomes.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Key Contributions</h2>
+      <ul>
+        <li><strong>Fine-grained Individuality:</strong> Grounding agents in real-world academic metadata and structural molecular data to capture the "scientific DNA" of individual agents.</li>
+        <li><strong>Diverse Expert Pool:</strong> Leveraging a wide array of specialized knowledge to cover the vast chemical search space more effectively than a single agent.</li>
+        <li><strong>Fact-Grounded Personas:</strong> Moving beyond simple prompts by grounding agents in real-world academic metadata and structural molecular data.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Observations</h2>
+      <div class="abstract">
+
+
+        <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; color: #444;">Granularity, Diversity, and Fact-Grounding matters in scientific agents</h3>
+        <p style="margin-bottom: 10px;">
+          The comprehensive analyses demonstrate that the performance of the multi-agent system is a direct function of the profile quality. We observe:
+        </p>
+        <ul style="margin-bottom: 20px;">
+          <li><strong>Granularity:</strong> Detailed scientific profiles outperform coarse-grained roles (e.g., "Chemist"), suggesting that LLMs can better leverage specific domain knowledge when provided with high-resolution context.</li>
+          <li><strong>Diversity:</strong> A heterogeneous pool of agents prevents groupthinking and enables the exploration of diverse chemical spaces, which is critical for identifying novel candidates that single-persona systems often overlook.</li>
+          <li><strong>Fact-Grounding:</strong> Anchoring agents in actual publication histories minimizes hallucinations and ensures that the reasoning remains consistent with established scientific reality.</li>
+        </ul>
+
+        <div class="charts-container">
+
+          <div class="chart-wrapper">
+            <h3 style="font-size: 1.1rem; margin-bottom: 10px;">Granularity</h3>
+            <canvas id="granularityChart"></canvas>
+          </div>
+
+          <div class="chart-wrapper">
+            <h3 style="font-size: 1.1rem; margin-bottom: 10px;">Diversity</h3>
+            <canvas id="diversityChart"></canvas>
+          </div>
+
+          <div class="chart-wrapper">
+            <h3 style="font-size: 1.1rem; margin-bottom: 10px;">Fact-Grounding</h3>
+            <canvas id="factGroundingChart"></canvas>
+          </div>
+          
+        </div>
+        
+        <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; color: #444; margin-top: 70px;">Expertise-Based Reasoning</h3>
+        <p>
+          Qualitative analysis of the agent debate logs confirms that agents successfully adopt their assigned scientific personas. Unlike standard LLMs, our research trajectory-based agents provide critiques and proposals that reflect their unique research backgrounds—ranging from synthetic feasibility to pharmacokinetics—leading to a more rigorous and multidisciplinary peer-review process within the discovery loop.
+        </p>
+        <div class="teaser">
+          <img src="../../assets/images/p2_1_qualitative.png" alt="Qualitative analysis of the agent debate logs">
+          <p class="teaser-caption">Reasoning of each scientist agent is grounded in their research trajectory.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">BibTeX</h2>
+      <div class="bibtex">
+<pre>@misc{jang2026indibatordiversefactgroundedindividuality,
+  title={INDIBATOR: Diverse and Fact-Grounded Individuality for Multi-Agent Debate in Molecular Discovery}, 
+  author={Yunhui Jang and Seonghyun Park and Jaehyung Kim and Sungsoo Ahn},
+  year={2026},
+  eprint={2602.01815},
+  archivePrefix={arXiv},
+  primaryClass={cs.AI},
+  url={https://arxiv.org/abs/2602.01815}
+}</pre>
+      </div>
+    </div>
+
+    <div class="back-link">
+      <a href="../../">← Back to Home</a>
+    </div>
+  </div>
+
+  <script>
+    const tasks = ['GSK3β', 'DRD2', 'JNK3'];
+    const colors = {
+      vanilla: '#888888',
+      ours: '#41BC9E', // Gold/Brown theme from your page
+      ablation1: '#EF4C56',
+      ablation2: '#F8C159'
+    };
+  
+    const commonOptions = {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: { y: { beginAtZero: true, title: { display: true, text: 'Top 10 AUC' } } },
+      plugins: {
+        legend: {
+          position: 'top',
+          align: 'center',
+          labels: {
+            boxWidth: 12,
+            padding: 8,
+            font: { size: 10 }
+          },
+          maxWidth: 180
+        }
+      }
+    };
+  
+    // 1. Granularity Plot
+    new Chart(document.getElementById('granularityChart'), {
+      type: 'bar',
+      data: {
+        labels: tasks,
+        datasets: [
+          { label: 'VanillaDebate', data: [0.477, 0.902, 0.161], backgroundColor: colors.vanilla },
+          { label: 'Role Persona', data: [0.625, 0.933, 0.178], backgroundColor: colors.ablation1 },
+          { label: 'Keyword Persona', data: [0.449, 0.929, 0.185], backgroundColor: colors.ablation2 },
+          { label: 'INDIBATOR (Ours)', data: [0.942, 0.950, 0.914], backgroundColor: colors.ours }
+        ]
+      },
+      options: commonOptions
+    });
+  
+    // 2. Diversity Plot
+    new Chart(document.getElementById('diversityChart'), {
+      type: 'bar',
+      data: {
+        labels: tasks,
+        datasets: [
+          { label: 'VanillaDebate', data: [0.477, 0.902, 0.161], backgroundColor: colors.vanilla },
+          { label: 'Single-profile', data: [0.285, 0.857, 0.147], backgroundColor: colors.ablation1 },
+          { label: 'Massive Single-profile', data: [0.559, 0.950, 0.453], backgroundColor: colors.ablation2 },
+          { label: 'INDIBATOR (Ours)', data: [0.942, 0.950, 0.914], backgroundColor: colors.ours }
+        ]
+      },
+      options: commonOptions
+    });
+  
+    // 3. Fact-Grounding Plot
+    new Chart(document.getElementById('factGroundingChart'), {
+      type: 'bar',
+      data: {
+        labels: tasks,
+        datasets: [
+          { label: 'VanillaDebate', data: [0.477, 0.902, 0.161], backgroundColor: colors.vanilla },
+          { label: 'LLM-generated', data: [0.501, 0.927, 0.235], backgroundColor: colors.ablation1 },
+          { label: 'Random-profile', data: [0.884, 0.929, 0.334], backgroundColor: colors.ablation2 },
+          { label: 'INDIBATOR (Ours)', data: [0.942, 0.950, 0.914], backgroundColor: colors.ours }
+        ]
+      },
+      options: commonOptions
+    });
+  </script>
+</body>
+</html>

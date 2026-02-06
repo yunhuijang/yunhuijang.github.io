@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEEL: A Simple and Scalable Representation for Graph Generation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: #333;
+      background: #fafafa;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+    .venue {
+      display: inline-block;
+      background: hsl(45, 100%, 45%);
+      color: #fff;
+      padding: 4px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    .authors {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .authors a {
+      color: hsl(45, 100%, 35%);
+      text-decoration: none;
+    }
+    .authors a:hover {
+      text-decoration: underline;
+    }
+    .affiliation {
+      font-size: 0.95rem;
+      color: #777;
+      margin-bottom: 30px;
+    }
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 400;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+    .links a:hover {
+      background: hsl(45, 100%, 35%);
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 15px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid hsl(45, 100%, 45%);
+    }
+    .teaser {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .teaser img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .teaser-caption {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 10px;
+    }
+    .abstract {
+      text-align: justify;
+    }
+    .bibtex {
+      background: #f0f0f0;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    .bibtex pre {
+      font-family: 'Courier New', monospace;
+      font-size: 0.85rem;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    .back-link {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .back-link a {
+      color: hsl(45, 100%, 35%);
+      text-decoration: none;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="title">A Simple and Scalable Representation for Graph Generation</h1>
+      <div class="venue">ICLR 2024</div>
+      <div class="authors">
+        <a href="https://yunhuijang.github.io">Yunhui Jang</a>,
+        <a href="https://seullee05.github.io">Seul Lee</a>,
+        <a href="https://sites.google.com/view/sungsooahn0215/home">Sungsoo Ahn</a>
+      </div>
+      <div class="affiliation">POSTECH, KAIST</div>
+      <div class="links">
+        <a href="https://arxiv.org/abs/2312.02230" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+          Paper
+        </a>
+        <a href="https://github.com/yunhuijang/GEEL" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/></svg>
+          Code
+        </a>
+      </div>
+    </div>
+
+    <div class="teaser">
+      <img src="../../assets/images/c2_geel.png" alt="GEEL Overview">
+      <p class="teaser-caption">Overview of the GEEL representation for graph generation.</p>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Overview</h2>
+      <p class="abstract">
+        We address limitations in neural network-based graph generation by introducing GEEL (gap encoded edge list), a compact representation whose size corresponds to the number of edges rather than being quadratic in the node count. Our method incorporates gap encoding and bandwidth restriction to minimize vocabulary size, supports autoregressive generation with node positional encoding, and extends to attributed graphs through custom grammar. Evaluation across twelve graph generation tasks demonstrates improved scalability and performance.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">BibTeX</h2>
+      <div class="bibtex">
+<pre>@inproceedings{
+  jang2024a,
+  title={A Simple and Scalable Representation for Graph Generation},
+  author={Yunhui Jang and Seul Lee and Sungsoo Ahn},
+  booktitle={The Twelfth International Conference on Learning Representations},
+  year={2024},
+  url={https://openreview.net/forum?id=nO344avRib}
+}</pre>
+      </div>
+    </div>
+
+    <div class="back-link">
+      <a href="../../">← Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>
