@@ -790,7 +790,7 @@ main {
 
 .timeline { margin-bottom: 30px; }
 
-.timeline .title-wrapper {
+.title-wrapper {
   display: flex;
   align-items: center;
   gap: 15px;
